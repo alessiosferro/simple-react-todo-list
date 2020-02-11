@@ -1,0 +1,48 @@
+.todo-list__item:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+
+.todo-list__item {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(208, 208, 208, 0.225);
+  border-radius: 4px;
+  align-items: center;
+  padding: 1rem;
+  padding-right: 2rem;
+}
+
+.todo-list__item-checkbox {
+  margin: 0 1.5rem;
+  transform: translateY(1px);
+}
+
+.todo-list__item-label:hover {
+  color: rgb(74, 144, 226);
+}
+
+.todo-list__item-label {
+  transition: color 200ms ease-in-out;
+  cursor: pointer;
+}
+
+.todo-list__item-button {
+  transition: all 200ms ease-in-out;
+  padding: 5px 1rem;
+  float: right;
+  border-radius: 4px;
+  background-color: white;
+  cursor: pointer;
+  color: rgba(192, 40, 40);
+  border: 1px solid rgba(192, 40, 40);
+}
+
+.todo-list__item-button:hover {
+  background-color: rgba(192, 40, 40);
+  color: white;
+}
+
+.todo-list__item-button:focus {
+  outline: none;
+  box-shadow: 0 0 3px 2px rgba(192, 40, 40, 0.4);
+}

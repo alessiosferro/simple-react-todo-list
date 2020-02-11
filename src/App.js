@@ -1,26 +1,60 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import "./App.css";
+import Todos from "./components/Todos/Todos";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  state = {
+    todos: [
+      {
+        id: 1,
+        title: "Gettare la spazzatura nel bidone dei rifiuti.",
+        completed: false
+      },
+      {
+        id: 2,
+        title: "Portare la moglie a cena fuori.",
+        completed: true
+      },
+      {
+        id: 3,
+        title: "Parlare con il direttore.",
+        completed: false
+      }
+    ]
+  };
+
+  toggleComplete = id => {
+    this.setState({
+      todos: this.state.todos.map(todo => {
+        if (todo.id === id) todo.completed = !todo.completed;
+
+        return todo;
+      })
+    });
+  };
+
+  deleteTodo = id => {
+    this.setState({
+      todos: this.state.todos.filter(todo => todo.id !== id)
+    });
+  };
+
+  render = () => {
+    return (
+      <main className="app-container">
+        <div className="container container--main container--border container--larger container--shadow">
+          <header className="container__header">
+            <h1>React Crash Course</h1>
+          </header>
+          <Todos
+            todos={this.state.todos}
+            toggleComplete={this.toggleComplete}
+            deleteTodo={this.deleteTodo}
+          />
+        </div>
+      </main>
+    );
+  };
 }
 
 export default App;
