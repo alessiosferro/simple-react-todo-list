@@ -1,0 +1,31 @@
+.add-todo__form {
+}
+
+.add-todo__input-field {
+  padding: 0.5rem;
+  padding-left: 0;
+  border: none;
+  font-size: 1.4rem;
+  margin-right: 2rem;
+  width: 25rem;
+}
+
+.add-todo__input-field:focus {
+  outline: none;
+  border-bottom: 1px solid green;
+}
+
+.add-todo__submit-btn {
+  transition: all 200ms ease-in-out;
+  padding: 0.5rem 1rem;
+  background-color: white;
+  border: 1px solid green;
+  border-radius: 4px;
+  color: green;
+}
+
+.add-todo__submit-btn:hover {
+  color: white;
+  background-color: green;
+  cursor: pointer;
+}

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./App.css";
 import Todos from "./components/Todos/Todos";
+import Header from "./components/layout/Header";
 
 class App extends Component {
   state = {
@@ -39,14 +40,26 @@ class App extends Component {
     });
   };
 
+  addTodo = title => {
+    this.setState({
+      todos: [
+        ...this.state.todos,
+        {
+          id: this.state.todos[this.state.todos.length - 1].id + 1,
+          title,
+          completed: false
+        }
+      ]
+    });
+  };
+
   render = () => {
     return (
       <main className="app-container">
         <div className="container container--main container--border container--larger container--shadow">
-          <header className="container__header">
-            <h1>React Crash Course</h1>
-          </header>
+          <Header title="Todo List" />
           <Todos
+            addTodo={this.addTodo}
             todos={this.state.todos}
             toggleComplete={this.toggleComplete}
             deleteTodo={this.deleteTodo}
