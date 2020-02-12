@@ -24,5 +24,7 @@ export default class Todos extends React.Component {
 }
 
 Todos.propTypes = {
-  todos: PropTypes.array.isRequired
+  todos: PropTypes.array.isRequired,
+  deleteTodo: PropTypes.func.isRequired,
+  toggleComplete: PropTypes.func.isRequired
 };
