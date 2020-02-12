@@ -27,7 +27,7 @@ class App extends Component {
           <Header title="Lista delle cose da fare" />
           <Route
             exact
-            path="/"
+            path="/todo-list-app"
             render={props => (
               <React.Fragment>
                 <AddTodo addTodo={this.addTodo} />
@@ -39,7 +39,7 @@ class App extends Component {
               </React.Fragment>
             )}
           />
-          <Route path="/about" component={About}></Route>
+          <Route path="/todo-list-app/about" component={About}></Route>
         </main>
       </Router>
     );

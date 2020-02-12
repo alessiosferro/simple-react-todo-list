@@ -11,14 +11,14 @@ class Header extends React.Component {
           exact
           className="header-nav__link"
           activeClassName="activeLink"
-          to="/"
+          to="/todo-list-app"
         >
           Home
         </NavLink>
         <NavLink
           className="header-nav__link"
           activeClassName="activeLink"
-          to="/about"
+          to="/todo-list-app/about"
         >
           About
         </NavLink>
