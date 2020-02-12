@@ -7,10 +7,7 @@ export class TodoItem extends Component {
     const { id, title, completed } = this.props.todo;
 
     return (
-      <li
-        //onClick={this.logTodoTitle}
-        className="todo-list__item"
-      >
+      <li className="todo-list__item">
         <label className="todo-list__item-label" htmlFor={`todo_${id}`}>
           <input
             id={`todo_${id}`}
@@ -38,8 +35,6 @@ export class TodoItem extends Component {
     this.props.todo.completed
       ? { textDecoration: "line-through" }
       : { textDecoration: "none" };
-
-  //logTodoTitle = () => console.log(this.props.todo.title);
 }
 
 TodoItem.propTypes = {

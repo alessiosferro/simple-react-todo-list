@@ -63,6 +63,10 @@ a {
   text-align: left;
 }
 
+.activeLink {
+  color: #4a90e2;
+}
+
 @media screen and (max-width: 968px) {
   .container--main {
     margin: 10rem 6rem;

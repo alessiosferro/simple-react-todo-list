@@ -3,6 +3,9 @@ import "./App.css";
 import Todos from "./components/Todos/Todos";
 import Header from "./components/layout/Header";
 import uuid from "uuid";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import AddTodo from "./components/AddTodo/AddTodo";
+import About from "./components/pages/About";
 
 class App extends Component {
   state = {
@@ -59,15 +62,26 @@ class App extends Component {
 
   render = () => {
     return (
-      <main className="container container--main container--border container--larger container--shadow">
-        <Header title="Lista delle cose da fare" />
-        <Todos
-          addTodo={this.addTodo}
-          todos={this.state.todos}
-          toggleComplete={this.toggleComplete}
-          deleteTodo={this.deleteTodo}
-        />
-      </main>
+      <Router>
+        <main className="container container--main container--border container--larger container--shadow">
+          <Header title="Lista delle cose da fare" />
+          <Route
+            exact
+            path="/"
+            render={props => (
+              <React.Fragment>
+                <AddTodo addTodo={this.addTodo} />
+                <Todos
+                  todos={this.state.todos}
+                  toggleComplete={this.toggleComplete}
+                  deleteTodo={this.deleteTodo}
+                />
+              </React.Fragment>
+            )}
+          />
+          <Route path="/about" component={About}></Route>
+        </main>
+      </Router>
     );
   };
 }

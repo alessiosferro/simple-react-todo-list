@@ -26,21 +26,26 @@ export class AddTodo extends Component {
 
   render() {
     return (
-      <form className="add-todo__form" onSubmit={this.onSubmit}>
-        <div className="add-todo__mobile">
-          <input
-            onChange={this.onChange}
-            type="text"
-            name="title"
-            className="add-todo__input-field"
-            placeholder="Aggiungi cosa da fare..."
-            value={this.state.title}
-          />
-          <button type="submit" className="add-todo__submit-btn">
-            + Aggiungi
-          </button>
-        </div>
-      </form>
+      <div className="add-todo__container">
+        <header className="container__header container__header--left">
+          <h3>Cose da fare</h3>
+        </header>
+        <form className="add-todo__form" onSubmit={this.onSubmit}>
+          <div className="add-todo__mobile">
+            <input
+              onChange={this.onChange}
+              type="text"
+              name="title"
+              className="add-todo__input-field"
+              placeholder="Aggiungi cosa da fare..."
+              value={this.state.title}
+            />
+            <button type="submit" className="add-todo__submit-btn">
+              + Aggiungi
+            </button>
+          </div>
+        </form>
+      </div>
     );
   }
 }
