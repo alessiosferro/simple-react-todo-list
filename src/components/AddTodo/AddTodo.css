@@ -31,3 +31,36 @@
   background-color: #4a90e2;
   cursor: pointer;
 }
+
+.add-todo__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2.5rem;
+  background-color: #f2f2f2;
+  padding: 0 1.5rem;
+  border-radius: 4px;
+}
+
+@media screen and (max-width: 768px) {
+  .add-todo__form {
+    width: 100%;
+  }
+  .add-todo__input-field {
+    width: 100%;
+    margin: 0 auto 1rem;
+  }
+  .add-todo__container {
+    flex-direction: column;
+  }
+  .add-todo__mobile {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 2rem 0;
+  }
+  .add-todo__submit-btn {
+    width: 12rem;
+    align-self: flex-end;
+  }
+}

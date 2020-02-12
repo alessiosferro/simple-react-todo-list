@@ -2,22 +2,23 @@ import React, { Component } from "react";
 import "./App.css";
 import Todos from "./components/Todos/Todos";
 import Header from "./components/layout/Header";
+import uuid from "uuid";
 
 class App extends Component {
   state = {
     todos: [
       {
-        id: 1,
+        id: uuid.v4(),
         title: "Gettare la spazzatura nel bidone dei rifiuti.",
         completed: false
       },
       {
-        id: 2,
+        id: uuid.v4(),
         title: "Portare la moglie a cena fuori.",
         completed: true
       },
       {
-        id: 3,
+        id: uuid.v4(),
         title: "Parlare con il direttore.",
         completed: false
       }
@@ -41,11 +42,14 @@ class App extends Component {
   };
 
   addTodo = title => {
+    const { todos } = this.state;
+
     this.setState({
       todos: [
-        ...this.state.todos,
+        ...todos,
         {
-          id: this.state.todos[this.state.todos.length - 1].id + 1,
+          // id: todos[todos.length - 1].id + 1,
+          id: uuid.v4(),
           title,
           completed: false
         }
@@ -55,16 +59,14 @@ class App extends Component {
 
   render = () => {
     return (
-      <main className="app-container">
-        <div className="container container--main container--border container--larger container--shadow">
-          <Header title="Lista delle cose da fare" />
-          <Todos
-            addTodo={this.addTodo}
-            todos={this.state.todos}
-            toggleComplete={this.toggleComplete}
-            deleteTodo={this.deleteTodo}
-          />
-        </div>
+      <main className="container container--main container--border container--larger container--shadow">
+        <Header title="Lista delle cose da fare" />
+        <Todos
+          addTodo={this.addTodo}
+          todos={this.state.todos}
+          toggleComplete={this.toggleComplete}
+          deleteTodo={this.deleteTodo}
+        />
       </main>
     );
   };

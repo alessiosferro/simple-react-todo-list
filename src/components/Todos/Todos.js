@@ -7,7 +7,7 @@ export default class Todos extends React.Component {
   render = () => {
     return (
       <div className="container">
-        <div style={this.addTodoContainerStyle}>
+        <div className="add-todo__container">
           <header className="container__header container__header--left">
             <h3>Cose da fare</h3>
           </header>
@@ -27,16 +27,6 @@ export default class Todos extends React.Component {
         </ul>
       </div>
     );
-  };
-
-  addTodoContainerStyle = {
-    display: "flex",
-    justifyContent: "space-between",
-    alignItems: "center",
-    marginBottom: "2.5rem",
-    backgroundColor: "#f2f2f2",
-    padding: "0 1.5rem",
-    borderRadius: "4px"
   };
 }
 

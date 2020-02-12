@@ -26,14 +26,6 @@ a {
   text-decoration: none;
 }
 
-.app-container {
-  flex-direction: column;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-}
-
 .container {
   padding: 2rem;
 }
@@ -46,12 +38,9 @@ a {
 }
 
 .container--main {
-  width: 60vw;
-  height: 80vh;
+  max-width: 90rem;
+  margin: 15rem auto;
   background-color: white;
-  min-height: 50rem;
-  min-width: 60rem;
-  max-width: 120rem;
   border-radius: 4px;
 }
 
@@ -72,4 +61,16 @@ a {
 
 .container__header--left {
   text-align: left;
+}
+
+@media screen and (max-width: 968px) {
+  .container--main {
+    margin: 10rem 6rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container--main {
+    margin: 4rem 3rem;
+  }
 }
