@@ -25,7 +25,7 @@ export class TodoItem extends Component {
         </label>
         <button
           onClick={this.props.deleteTodo.bind(this, id)}
-          className="todo-list__item-button"
+          className="todo-list__item__remove-todo-btn"
           type="button"
         >
           Elimina

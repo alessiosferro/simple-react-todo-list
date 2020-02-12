@@ -9,11 +9,11 @@ export default class Todos extends React.Component {
       <div className="container">
         <div style={this.addTodoContainerStyle}>
           <header className="container__header container__header--left">
-            <h3>Todos</h3>
+            <h3>Cose da fare</h3>
           </header>
           <AddTodo addTodo={this.props.addTodo} />
         </div>
-        <ul style={{ listStyleType: "none" }}>
+        <ul className="container--background" style={{ listStyleType: "none" }}>
           {this.props.todos.map(todo => {
             return (
               <TodoItem
@@ -32,7 +32,11 @@ export default class Todos extends React.Component {
   addTodoContainerStyle = {
     display: "flex",
     justifyContent: "space-between",
-    alignItems: "center"
+    alignItems: "center",
+    marginBottom: "2.5rem",
+    backgroundColor: "#f2f2f2",
+    padding: "0 1.5rem",
+    borderRadius: "4px"
   };
 }
 

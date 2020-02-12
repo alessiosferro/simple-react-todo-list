@@ -1,10 +1,7 @@
-.add-todo__form {
-}
-
 .add-todo__input-field {
-  padding: 0.5rem;
-  padding-left: 0;
-  border: none;
+  padding: 1rem 1.5rem;
+  border-radius: 4px;
+  border: 1px solid #4a90e2;
   font-size: 1.4rem;
   margin-right: 2rem;
   width: 25rem;
@@ -12,20 +9,25 @@
 
 .add-todo__input-field:focus {
   outline: none;
-  border-bottom: 1px solid green;
+  box-shadow: 0 0 3px 2px #4a90e266;
 }
 
 .add-todo__submit-btn {
   transition: all 200ms ease-in-out;
-  padding: 0.5rem 1rem;
+  padding: 1rem 1rem;
   background-color: white;
-  border: 1px solid green;
+  border: 1px solid #4a90e2;
   border-radius: 4px;
-  color: green;
+  color: #4a90e2;
+}
+
+.add-todo__submit-btn:focus {
+  outline: none;
+  box-shadow: 0 0 3px 2px #4a90e266;
 }
 
 .add-todo__submit-btn:hover {
   color: white;
-  background-color: green;
+  background-color: #4a90e2;
   cursor: pointer;
 }

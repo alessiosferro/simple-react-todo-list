@@ -26,17 +26,17 @@ export class AddTodo extends Component {
 
   render() {
     return (
-      <form onSubmit={this.onSubmit} className="add-todo__form">
+      <form onSubmit={this.onSubmit}>
         <input
           onChange={this.onChange}
           type="text"
           name="title"
           className="add-todo__input-field"
-          placeholder="Aggiungi todo..."
+          placeholder="Aggiungi cosa da fare..."
           value={this.state.title}
         />
         <button type="submit" className="add-todo__submit-btn">
-          Aggiungi
+          + Aggiungi
         </button>
       </form>
     );

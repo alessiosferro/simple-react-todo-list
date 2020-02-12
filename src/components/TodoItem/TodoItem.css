@@ -26,7 +26,7 @@
   cursor: pointer;
 }
 
-.todo-list__item-button {
+.todo-list__item__remove-todo-btn {
   transition: all 200ms ease-in-out;
   padding: 5px 1rem;
   float: right;
@@ -37,12 +37,12 @@
   border: 1px solid rgba(192, 40, 40);
 }
 
-.todo-list__item-button:hover {
+.todo-list__item__remove-todo-btn:hover {
   background-color: rgba(192, 40, 40);
   color: white;
 }
 
-.todo-list__item-button:focus {
+.todo-list__item__remove-todo-btn:focus {
   outline: none;
   box-shadow: 0 0 3px 2px rgba(192, 40, 40, 0.4);
 }

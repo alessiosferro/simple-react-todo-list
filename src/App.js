@@ -57,7 +57,7 @@ class App extends Component {
     return (
       <main className="app-container">
         <div className="container container--main container--border container--larger container--shadow">
-          <Header title="Todo List" />
+          <Header title="Lista delle cose da fare" />
           <Todos
             addTodo={this.addTodo}
             todos={this.state.todos}
